@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Cinema-Booking Tickets</title>
+    <style>
+         body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color:goldenrod;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav a {
+            color: gold;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: darkorange;
+        }
+        main.booking-system {
+            max-width: 8000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        main.booking-system h2 {
+            text-align: center;
+            color: #333;
+        }
+        form{
+            display: grid;
+            gap: 15px;
+        }
+        fieldset
+        {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button {
+            padding: 15px;
+            background-color: goldenrod;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkorange;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: gold;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Performance Booking</h1>
+        <nav>
+            <a href="Index.html">Home</a>
+            <a href="register.html">Register/Login</a>
+            <a href="booking.html">Book Tickets</a>
+            <a href=""></a>
+        </nav>
+    </header>
+    <main class="booking-system">
+        <h2>Select a performance and book</h2>
+        <form id="booking-form">
+            <fieldset>
+                <legend>Performance Details</legend>
+                <label for="production-type">Production Type:</label>
+                <select id="production-type" name="production-type" required>
+                    <option value="">Select a production type</option>
+                    <option value="movie">Movie</option>
+                    <option value="play">Play</option>
+                    <option value="concert">Concert</option>
+                </select>
+                <label for="production-name">Production Name:</label>
+                <select id="production-name" name="production-name" required>
+                    <option value="">Select a production name</option>
+                    <option value="movie1">The Great Escape</option>
+                    <option value="play1">Hamlet</option>
+                    <option value="concert1">ConA Dolls House</option>
+                </select>
+
+                <label for="performance-date">Performance Date:</label>
+                <input type="date" id="performance-date" name="performance-date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ticket Details(required for sales tracking)</legend>
+                <label for="numberOfTickets">Number of Tickets:</label>
+                <input type="number" id="numberOfTickets" name="numberOfTickets" min="1" max="10" required>
+                <label for="seat-preference">Seat Preference:</label>
+                <select id="seat-preference" name="seat-preference"  required>
+                    <option value="">Select a seat preference</option>
+                    <option value="front">Front</option>
+                    <option value="middle">Middle</option>
+                    <option value="back">Back</option>
+                    <label for="saleDate">Date of Sale:</label>
+                    <input type="date" id="saleDate" value="" required>
+
+            </fieldset>
+            <button type="submit">Book Tickets</button>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Gold Cinema. All rights reserved.</p>
+</body>
+</html>
